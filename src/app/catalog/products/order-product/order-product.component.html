@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-6">
+        <select class="form-control"name="user" #userIndex>
+            <option *ngFor="let user of users; let i = index" [value]="i">{{user.name}} {{user.surname}}</option>
+        </select>
+    </div>
+    <div class="col-md-6">
+        <button class="btn btn-success" (click)="order(userIndex)">Užsakyti</button>
+    </div>
+</div>
+
+<!-- <div style="margin: 10px; border: 1px solid red;">
+    <p>order-product works!</p>
+    Užsakyk produktą
+</div>
+<button (click)="order()">Užsakyti</button> -->
